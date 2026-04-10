@@ -130,11 +130,20 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
+@keyframes bgSlide {
+  0%, 15% { transform: translate3d(0, 0, 0); }
+  20%, 35% { transform: translate3d(-20%, 0, 0); }
+  40%, 55% { transform: translate3d(-40%, 0, 0); }
+  60%, 75% { transform: translate3d(-60%, 0, 0); }
+  80%, 95% { transform: translate3d(-80%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
 .hero-bg-track {
   display: flex;
   height: 100%;
   width: 500%; /* 5 slides */
-  transition: transform 1.5s ease-in-out;
+  animation: bgSlide 10s infinite;
 }
 
 .hero-bg-slide {
@@ -215,36 +224,42 @@ h1, h2, h3, h4 {
   background-color: var(--white);
 }
 
-.empathy-boxes {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
-}
-
-.empathy-box {
-  background: var(--bg-light);
-  padding: 2rem;
-  border-radius: 12px;
-  flex: 1;
-  min-width: 280px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  border-top: 4px solid var(--accent-orange);
-  transition: transform 0.3s ease;
-}
-
-.empathy-box:hover {
-  transform: translateY(-5px);
-}
-
-.empathy-img {
+.empathy-poster {
+  position: relative;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.empathy-poster-img {
+  width: 100%;
+  display: block;
+}
+
+.empathy-poster-texts {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+}
+
+.empathy-poster-texts p {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary-blue);
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  width: 90%;
+  border-left: 4px solid var(--accent-orange);
 }
 
 .empathy-solution {
@@ -631,11 +646,13 @@ h1, h2, h3, h4 {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 2.5rem; }
-  .hero-title-main { font-size: 3.5rem; }
-  .hero-title-sub { font-size: 1.2rem; }
+  .hero h1 { margin-bottom: 2rem; }
+  .hero-title-main { font-size: 4.5rem; }
+  .hero-title-sub { font-size: 1rem; margin-top: 1rem; }
   .hero p { font-size: 1.1rem; }
-  .section-title { font-size: 1.5rem; }
+  .section-title { font-size: 1.25rem; }
+  .empathy-poster { max-width: 100%; }
+  .empathy-poster-texts p { font-size: 0.9rem; padding: 0.8rem; }
   .comparison-table th, .comparison-table td { padding: 1rem; font-size: 0.9rem; }
   .header { padding: 1rem; }
   .btn { padding: 0.8rem 1.8rem; }

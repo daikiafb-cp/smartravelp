@@ -272,123 +272,27 @@ h1, h2, h3, h4 {
   border-radius: 12px;
 }
 
-/* Features Grid */
-.features {
+/* Reasons Image Section */
+.reasons-image-section {
   background: var(--bg-light);
-}
-
-.feature-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;
-}
-
-.feature-card {
-  background: var(--white);
-  padding: 0;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, var(--primary-blue), var(--sky-blue));
-  z-index: 2;
-}
-
-.feature-img {
-  width: 100%;
-  height: 45vh;
-  object-fit: cover;
-  margin-bottom: 0;
-}
-
-.feature-text {
-  padding: 3rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.feature-text h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary-blue);
-  line-height: 1.4;
-}
-
-.feature-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-dark);
-}
-
-@media (min-width: 768px) {
-  .feature-card {
-    flex-direction: row;
-    min-height: 60vh;
-  }
-  .feature-card:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-  .feature-img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-  }
-  .feature-text {
-    width: 50%;
-    padding: 4rem;
-  }
-  .feature-text h3 {
-    font-size: 2.2rem;
-  }
-  .feature-text p {
-    font-size: 1.25rem;
-  }
-}
-@media (max-width: 767px) {
-  .feature-card {
-    min-height: 85vh; /* Fills the mobile screen viewport */
-  }
-}
-
-/* Key Points Banner */
-.key-points {
-  background: linear-gradient(135deg, var(--primary-blue), var(--sky-blue));
-  color: var(--white);
-  padding: 4rem 2rem;
   text-align: center;
 }
 
-.points-grid {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-  max-width: 1000px;
+.reasons-poster-img {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
   margin: 0 auto;
 }
 
-.point-item {
-  flex: 1;
-  min-width: 200px;
+@media (min-width: 769px) {
+  .reasons-poster-img {
+    max-width: 600px;
+  }
 }
 
-.point-item h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent-gold);
-}
 
 /* Comparison & Slider */
 .comparison {

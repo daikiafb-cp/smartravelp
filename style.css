@@ -545,15 +545,15 @@ h1, h2, h3, h4 {
   .section-title { font-size: 1.25rem; }
   
   .fixed-poster, .slider-container, .empathy-solution-banner {
-    margin-left: -2rem;
-    margin-right: -2rem;
-    width: calc(100% + 4rem);
-    max-width: none;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
     border-radius: 0;
   }
 
   .solution-bg {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: auto;
+    height: auto;
   }
   .solution-text {
     font-size: 1.6rem;

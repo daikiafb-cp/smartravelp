@@ -315,6 +315,8 @@ h1, h2, h3, h4 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   color: var(--accent-gold);
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
+  text-shadow: 0 4px 15px rgba(0,0,0,0.8), 0 2px 5px rgba(0,0,0,0.6);
 }
 
 .reason-text p {

@@ -281,16 +281,14 @@ h1, h2, h3, h4 {
 }
 
 .reason-banner-list {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  display: block;
 }
 
 .reason-banner {
   position: relative;
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
@@ -609,9 +607,7 @@ h1, h2, h3, h4 {
 
   .reason-banner {
     aspect-ratio: 4 / 5;
-  }
-  .reason-banner-list {
-    gap: 1.5rem;
+    margin-bottom: 2rem;
   }
   .reason-text {
     padding: 3rem 1.5rem 1.5rem;

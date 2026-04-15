@@ -517,7 +517,15 @@ h1, h2, h3, h4 {
   .hero-title-sub { font-size: 1rem; margin-top: 1rem; }
   .hero p { font-size: 1.1rem; }
   .section-title { font-size: 1.25rem; }
-  .fixed-poster { max-width: 100%; }
+  
+  .fixed-poster, .slider-container {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    width: calc(100% + 4rem);
+    max-width: none;
+    border-radius: 0;
+  }
+  
   .comparison-table th, .comparison-table td { padding: 1rem; font-size: 0.9rem; }
   .header { padding: 1rem; }
   .btn { padding: 0.8rem 1.8rem; }

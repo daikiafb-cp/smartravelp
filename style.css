@@ -472,15 +472,33 @@ h1, h2, h3, h4 {
   margin-bottom: 1rem;
 }
 
-.affiliate-problems ul {
-  list-style: none;
-  font-size: 1.1rem;
-  color: var(--text-dark);
-  margin-bottom: 1.5rem;
+.problem-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.affiliate-problems li {
-  margin-bottom: 0.5rem;
+.problem-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.problem-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.problem-card p {
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--text-dark);
+  margin: 0;
 }
 
 .solution-bridge {
